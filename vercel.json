@@ -5,6 +5,10 @@
     {
       "source": "/location/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/locatrion/:path*",
+      "destination": "/index.html"
     }
   ],
   "headers": [
