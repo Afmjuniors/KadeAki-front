@@ -313,6 +313,11 @@ align-items:center;
 padding:37px 0 48px;
 color:var(--text-muted);
 font-size:.9rem}
+.footer-link{
+color:var(--green);
+font-weight:800}
+.footer-link:hover{
+text-decoration:underline}
 .location-page{
 display:grid;
 min-height:100vh;
@@ -352,6 +357,31 @@ margin-bottom:14px;
 font-size:clamp(2rem,7vw,3.2rem);
 letter-spacing:-.06em;
 line-height:1.03}
+.privacy-card{
+width:min(760px,100%);
+text-align:left}
+.privacy-card .brand{
+display:flex;
+justify-content:center}
+.privacy-card h1{
+font-size:clamp(2.1rem,6vw,3.4rem);
+text-align:center}
+.privacy-card .privacy-updated{
+margin-bottom:34px;
+font-size:.9rem;
+text-align:center}
+.privacy-card section{
+margin-top:28px}
+.privacy-card h2{
+margin:0 0 8px;
+font-size:1.15rem;
+letter-spacing:-.02em}
+.privacy-card section p{
+max-width:none;
+margin:0}
+.privacy-card section a{
+color:var(--green);
+font-weight:800}
 .location-card p{
 max-width:440px;
 margin:0 auto 24px;
