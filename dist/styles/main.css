@@ -33,22 +33,13 @@ justify-content:space-between}
 .brand{
 display:inline-flex;
 align-items:center;
-gap:10px;
-font-size:1.36rem;
-font-weight:900;
-letter-spacing:-.05em}
-.brand>span:last-child span{
-color:var(--green-soft)}
-.brand-symbol{
-display:grid;
-place-items:center;
-width:34px;
-height:34px;
-border-radius:11px;
-color:var(--green-deep);
-background:var(--green-pale);
-font-size:1.7rem;
-line-height:1}
+gap:8px}
+.brand-mark{
+width:38px;
+height:38px}
+.brand-wordmark{
+width:128px;
+height:auto}
 .language-switch{
 display:flex;
 padding:4px;
@@ -258,7 +249,7 @@ background:#e6edd9}
 background:#edf3ea}
 .feature-4{
 background:#f3f2e4}
-.feature>span{
+.feature-icon{
 display:grid;
 place-items:center;
 width:40px;
@@ -269,6 +260,14 @@ background:var(--white);
 color:var(--green);
 font-size:1.25rem;
 font-weight:900}
+.feature-icon svg,.location-icon svg{
+width:24px;
+height:24px;
+fill:none;
+stroke:currentColor;
+stroke-width:1.8;
+stroke-linecap:round;
+stroke-linejoin:round}
 .languages{
 display:flex;
 justify-content:space-between;
@@ -340,6 +339,14 @@ border-radius:23px;
 background:var(--green-pale);
 color:var(--green);
 font-size:2.1rem}
+.location-icon .feature-icon{
+width:auto;
+height:auto;
+margin:0;
+background:transparent}
+.location-icon .feature-icon svg{
+width:35px;
+height:35px}
 .location-card h1{
 margin-bottom:14px;
 font-size:clamp(2rem,7vw,3.2rem);
@@ -402,7 +409,7 @@ margin-top:30px}
 .step,.feature{
 min-height:auto;
 padding:23px}
-.step b,.feature>span{
+.step b,.feature-icon{
 margin-bottom:25px}
 .qr-layout{
 gap:28px}
@@ -417,4 +424,3 @@ margin-top:60px}
 bottom:6%;
 left:-2px}
 }
-
