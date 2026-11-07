@@ -5,7 +5,7 @@ const config = { ...defaults, ...(window.KADEAKI_CONFIG || {}) };
 let language = browserLanguage();
 const privacyContent = {
   pt: {
-    locale: "pt_BR", title: "Política de Privacidade — KadeAki", description: "Como o KadeAki trata os seus dados.", link: "Política de privacidade", updated: "Última atualização: 23 de setembro de 2026",
+    locale: "pt_BR", title: "Política de Privacidade — KadeAki", description: "Como o KadeAki trata os seus dados.", link: "Política de privacidade", updated: "Versão 1.1 · Última atualização: 7 de novembro de 2026",
     sections: [
       ["Dados do aplicativo", "Localizações, itens, categorias, quantidades, descrições e identificadores de QR Code são armazenados no banco local do seu dispositivo. O KadeAki não exige conta, login ou servidor próprio para funcionar."],
       ["Fotos e reconhecimento por imagem", "Fotos escolhidas ou tiradas ficam no armazenamento privado do aplicativo. O reconhecimento por imagem usa um modelo incluído no próprio app; suas fotos não são enviadas ao KadeAki nem a um serviço de reconhecimento."],
@@ -16,7 +16,7 @@ const privacyContent = {
     ],
   },
   en: {
-    locale: "en_US", title: "Privacy Policy — KadeAki", description: "How KadeAki handles your data.", link: "Privacy policy", updated: "Last updated: September 23, 2026",
+    locale: "en_US", title: "Privacy Policy — KadeAki", description: "How KadeAki handles your data.", link: "Privacy policy", updated: "Version 1.1 · Last updated: November 7, 2026",
     sections: [
       ["App data", "Locations, items, categories, quantities, descriptions and QR code identifiers are stored in your device's local database. KadeAki does not require an account, sign-in or its own server to work."],
       ["Photos and image recognition", "Photos selected or taken are kept in the app's private storage. Image recognition uses a model included in the app; your photos are not sent to KadeAki or to a recognition service."],
@@ -27,7 +27,7 @@ const privacyContent = {
     ],
   },
   es: {
-    locale: "es_ES", title: "Política de Privacidad — KadeAki", description: "Cómo KadeAki trata sus datos.", link: "Política de privacidad", updated: "Última actualización: 23 de septiembre de 2026",
+    locale: "es_ES", title: "Política de Privacidad — KadeAki", description: "Cómo KadeAki trata sus datos.", link: "Política de privacidad", updated: "Versión 1.1 · Última actualización: 7 de noviembre de 2026",
     sections: [
       ["Datos de la aplicación", "Las ubicaciones, artículos, categorías, cantidades, descripciones e identificadores de códigos QR se almacenan en la base de datos local de su dispositivo. KadeAki no requiere cuenta, inicio de sesión ni servidor propio para funcionar."],
       ["Fotos y reconocimiento de imágenes", "Las fotos seleccionadas o tomadas se conservan en el almacenamiento privado de la aplicación. El reconocimiento de imágenes usa un modelo incluido en la app; sus fotos no se envían a KadeAki ni a un servicio de reconocimiento."],
