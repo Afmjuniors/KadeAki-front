@@ -1,2 +1,13 @@
-[]
-
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kadeaki.android",
+      "sha256_cert_fingerprints": [
+        "F0:0F:AC:EB:30:6C:E3:4E:F1:F1:BB:5C:2E:D7:E8:45:B9:C3:BA:B5:9A:9F:6E:45:78:96:53:4A:93:A7:71:7F",
+        "70:A5:0F:5C:24:B4:9C:35:08:0B:8D:66:A6:EB:C8:22:EB:5F:EE:C5:5C:8F:D7:F5:CE:DD:33:4F:DE:68:BE:6A"
+      ]
+    }
+  }
+]
