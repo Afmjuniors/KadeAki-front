@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /location/
+Disallow: /locatrion/
+
+Sitemap: https://kadeaki.com/sitemap.xml

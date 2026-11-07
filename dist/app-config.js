@@ -7,10 +7,10 @@
  */
 window.KADEAKI_CONFIG = {
   // Ex.: "com.suaempresa.kadeaki". Necessário para o botão "Abrir no app".
-  androidPackage: "",
+  androidPackage: "com.kadeaki.android",
 
-  // Substitua pela ficha oficial quando ela estiver publicada.
-  playStoreUrl: "https://play.google.com/store/search?q=KadeAki&c=apps",
+  // Ficha oficial do app na Google Play.
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.kadeaki.android",
 
   // "location" é a rota oficial. "locatrion" é mantida como alias seguro
   // para QR Codes que tenham sido impressos com essa grafia.

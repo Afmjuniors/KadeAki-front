@@ -1,6 +1,6 @@
 import { browserLanguage, content } from "./content.js";
 
-const defaults = { androidPackage: "", playStoreUrl: "https://play.google.com/store/search?q=KadeAki&c=apps", locationRoutes: ["location", "locatrion"], canonicalLocationRoute: "location" };
+const defaults = { androidPackage: "com.kadeaki.android", playStoreUrl: "https://play.google.com/store/apps/details?id=com.kadeaki.android", locationRoutes: ["location", "locatrion"], canonicalLocationRoute: "location" };
 const config = { ...defaults, ...(window.KADEAKI_CONFIG || {}) };
 let language = browserLanguage();
 const privacyContent = {
@@ -67,7 +67,7 @@ function renderLanding() {
 }
 
 function locationFromPath() { const parts = location.pathname.split("/").filter(Boolean); const route = parts[0]; const id = decodeURIComponent(parts[1] || ""); return { id, isLocation: config.locationRoutes.includes(route), isValid: /^[A-Za-z0-9_-]{3,64}$/.test(id) }; }
-function openAppHref(id) { if (!config.androidPackage) return ""; const path = `${config.canonicalLocationRoute}/${encodeURIComponent(id)}`; return `intent://${path}#Intent;scheme=https;package=${encodeURIComponent(config.androidPackage)};end`; }
+function openAppHref(id) { if (!config.androidPackage) return ""; const path = `${config.canonicalLocationRoute}/${encodeURIComponent(id)}`; return `intent://kadeaki.com/${path}#Intent;scheme=https;package=${encodeURIComponent(config.androidPackage)};end`; }
 function renderLocation(context) {
   const t = content[language]; setMetadata(t); const href = context.isValid ? openAppHref(context.id) : ""; const title = context.isValid ? t.locationTitle : t.invalidTitle; const text = context.isValid ? t.locationText : t.invalidText; const note = context.isValid ? (/android/i.test(navigator.userAgent) ? t.androidNote : t.locationText) : t.invalidNote;
   document.querySelector("#app").innerHTML = `<main class="location-page"><section class="location-card ${context.isValid ? "" : "invalid"}">${brand()}<div class="location-icon">${context.isValid ? featureIcon("pin") : "!"}</div><h1>${title}</h1><p>${text}</p>${context.isValid ? `<code>/${config.canonicalLocationRoute}/${context.id}</code>` : ""}<div class="location-actions">${href ? `<a class="button" href="${href}">${t.open}</a>` : ""}${appButton(t.install, href ? "secondary" : "")}</div><small>${note}</small></section></main>`;
@@ -76,7 +76,7 @@ function renderLocation(context) {
 function renderPrivacy() {
   const t = privacyContent[language] || privacyContent.pt;
   setMetadata(t);
-  document.querySelector("#app").innerHTML = `<main class="location-page"><article class="location-card privacy-card"><nav class="privacy-nav">${brand()}${languageSwitch()}</nav><h1>${t.title.split(" — ")[0]}</h1><p class="privacy-updated">${t.updated}</p>${t.sections.map(([heading, body]) => `<section><h2>${heading}</h2><p>${body}${heading === t.sections[t.sections.length - 1][0] ? ` <a href="mailto:afmjuniors@gmail.com">afmjuniors@gmail.com</a>.` : ""}</p></section>`).join("")}</article></main>`;
+  document.querySelector("#app").innerHTML = `<main class="location-page"><article class="location-card privacy-card"><nav class="privacy-nav">${brand()}${languageSwitch()}</nav><h1>${t.title.split(" — ")[0]}</h1><p class="privacy-updated">${t.updated}</p>${t.sections.map(([heading, body]) => `<section><h2>${heading}</h2><p>${body}${heading === t.sections[t.sections.length - 1][0] ? ` <a href="mailto:contato@forgedevx.com">contato@forgedevx.com</a>.` : ""}</p></section>`).join("")}</article></main>`;
   bindLanguageSwitch(renderPrivacy);
 }
 
